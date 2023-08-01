@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ANPR by tharshini_sri</title>
+</head>
+
+<body>
+    <h1>AUTOMATIC NUMBER PLATE RECOGNITION
+        APPLIED TO PARKING SECTION</h1>
+    <h2>Mini Project</h2>
+    <hr />
+    </br>
+
+    <h3>ABSTRACT</h3>
+    <p>Automatic Number Plate Recognition (ANPR) is a mass surveillance system
+        that captures the image of vehicles and recognizes their license number. This paper
+        presents the implementation of ANPR in various places like malls, tolls etc. and it
+        also presents a recognition method in which the vehicle plate image is obtained by
+        a digital cameras and the image is processed to get the number plate information.</p>
+    <p>The ANPR algorithm works on steps like extraction of numbers processing
+        via filtering, segmentation, and character recognition. A data base is used to store
+        the vehicle information. First the number plate is detected from an input frame,
+        then the character from the plate are extracted and then OCR is applied to
+        recognize the extracted character.</p>
+    <p>After all the process, a data base is used to store the recognized vehicle
+        number along with entry time and further exit time is also noted. Then using the
+        entry time and the exit time, the parking fare is calculated, and a bill is generated
+        using the Thermal printer.</p>
+    </br>
+
+    <h3>CHAPTER 1</h3>
+    <h4>SUMMARY OF THE BASE PAPER</h4>
+    <h4>Introduction:</h4></br>
+    <h3>Title :</h3>
+    <p>Automatic Car Number Plate Detection System to
+        detect Number plates</p>
+    <h3>Journal name :</h3>
+    <p>IOSR Journal of Computer Engineering (IOSR-
+        JCE)</p>
+    <h3>Publisher :</h3>
+    <p>e-ISSN: 2278-0661, p-ISSN: 2278-8727, Volume
+        18, Issue 4, Ver. III</p>
+    <h3>Year :</h3>
+    <p>JUL-AUG 2016</p>
+    </br>
+    
+    <p>ANPR is an image processing innovation which is used to perceive vehicles
+        by their tags. This expertise is ahead of time ubiquity in security and traffic
+        installation. Tag Recognition system is an application of PC version. PC version is
+        a technique for using a PC to take out abnormal state information from a digital
+        image.</p>
+    
+
+    <p>The ANPR system consist of the following steps:</p>
+    <p>· Vehicle image capture</p>
+    <p>· Pre processing</p>
+    <p>· Number Plate extraction</p>
+    <p>· Character Segmentation</p>
+    <p>· Character Recognition</p>
+    
+
+    <p>The ANPR system works in these strides,</p>
+    <p>The initial step is the location of the vehicle and capturing a vehicle image of front
+        or back perspective of the vehicle.</p>
+    <p>The second step is the localization of the number plate and the extraction of
+        vehicle number plate as an image.</p>
+    <p>The final stride use image segmentation strategy, OCR (Optical Character
+        Recognition) is one of the strategies to perceive each character with the assistance
+        of database stored for separation alphanumeric character.</p>
+    <img src="img/anpr_img1.png">
+    
+
+    <h4>Literature Review:</h4>
+    <p>Muhammad Tahir Qadri, In this anticipate for the recognition of OCR techniques
+        is used which is susceptible to misalignment and to various sizes. A series of image
+        processing techniques of the system for identifying the vehicle form the database
+        stored in the PC.</p>
+    <p>AmrBadr et al. In this paper Automatic Recognition of Car License Plate Number
+        got to be indispensable part in our day by day life. This paper mainly explains an
+        ANPR using Morphological operations, Histogram manipulation and Edge
+        discovery techniques for plate localization and characters segmentation. Artificial
+        Neural Networks are used for Character Classification and Recognitiion.</p>
+    
+
+    <h4>ANPR System Model:</h4>
+    <p>Typical ANPR system consist of four steps these are Image Acquisition, License
+        Plate Extraction, Character Segmentation, Character Recognition.</p>
+    
+
+    <h4>Image Acquisition:</h4>
+    <p>The initial step is Acquisition of image. Getting an image using digital camera
+        associated with the PC. Those caught images are in RGB format so it can be
+        further processed for the Number Plate Extraction. The Database of the system
+        contains the personal information of the vehicle proprietor and a few plate vehicle
+        images, abbreviations and acronyms.</p>
+    
+
+    <h4>Image Processing:</h4>
+    <p>Captured RGB image is influenced by many elements like Optical system
+        distortion, system commotion, lack of presentation or over the top relative motion
+        of camera or vehicle and so forth result is the degradation of a captured vehicle and
+        the unfriendly influence of the further image processing. Pre-processing includes
+        converting the RGB image into a gray scale image.</p>
+    
+
+    <h4>Plate Localization:</h4>
+    <p>The basic stride is to recognise the plate size. By and large number plates are
+        rectangular plate mat lab toolbox gives a function celled region props. It quantifies
+        a set of properties for each marks region in the matrix. Will extricate from the
+        input image.</p>
+    
+
+    <h4>Plate Segmentation:</h4>
+    <p>It assumes an imperative role in ANPR. The essential thought after region
+        growing is to remember one or more criteria that are quality for the wanted region.
+        Subsequent to establishing the criteria, the image is looked for any pixels that
+        satisfies the necessities. We get individual character and number images by using
+        Vertical and Horizontal Scanning Techniques.</p>
+    
+
+    <h4>Character Recognition:</h4>
+    <p>Distinctive strategies were used for character recognition, letters and characters
+        in the paper. The character image is match up to our given database and the best
+        resembling is considered. Another technique for character recognition is the OCR
+        (Optical Character Recognition) is used to look at the very individual character
+        against the complete alphanumeric database. The character is then contrasted and
+        the database for the vehicle authorization.</p>
+    </br>
+
+    <h3>CHAPTER 2</h3>
+    <h4>MERITS AND DEMERITS OF THE BASE PAPER</h4>
+    <h4>2.1 NUMBER PLATE DETECTION :</h4></br>
+    <h4>2.1.1 EXISTING METHODOLOGIES :</h4>
+    <h4>1: Image Binarization:</h4>
+    <p>When compared to processing a grayscale image, black and white image
+        processing requires less time. So there is a process called image binarization which
+        converts a grayscale image into a black and white image. This technique selects a
+        threshold to categorise certain pixels as black and certain pixels as white.
+        However, how to select the right threshold value for a specific image is the key
+        issue. Selecting the ideal threshold value can sometimes be exceedingly
+        challenging or even impossible. To solve this issue, adaptive thresholding can be
+        applied. A threshold can be manually chosen by the user or automatically chosen
+        by an algorithm, which is referred to as automatic thresholding.</p>
+    
+    <h4>2: Hough Transform:</h4>
+    <p>Hough Transform is a feature extraction technique that was initially employed for
+        line detection. Later, it was later expanded to locate positions for arbitrary shapes
+        like circles and ovals. D.H. Ballard generalised the original algorithm.</p>
+    
+    <h4>3: Blob Detection:</h4>
+    <p>Blob detection is used to identify areas or points that stand out from their
+        surroundings in terms of colour or brightness. The major goal of this method is to
+        identify complementary regions that are not picked up by corner or edge detection
+        techniques. Laplacian of Gaussian (LoG), Difference of Gaussians (DoG),
+        Determinant of Hessian (DoH), maximally stable extremal regions, and Principle
+        curvature based region detector are a few popular blob detectors.</p>
+
+    <h4>4: Connected Component Analysis (CCA):</h4>
+    <p>It is also known as blob extraction, a method to specifically name connected
+        components' subsets based on a specific heuristic. It scans a binary image and
+        labels each pixel in accordance with the connection conditions of the
+        corresponding pixel, such as the current pixel's (8-connectivity) north, east, north,
+        north west, and west Only the current pixel's north and west neighbours employ 4-
+        connectivity. For automated picture analysis, the algorithm performs better and is
+        highly helpful. Both character and plate segmentation can be done using this
+        technique.</p>
+
+    <h4>5: Mathematical morphology:</h4>
+    <p>Set theory, lattice theory, topology, and random functions serve as the foundation
+        for mathematical morphology. Although it is frequently utilised with digital
+        images, it can also be applied to other spatial structures. It was initially created for
+        the purpose of processing binary images before being expanded to process
+        grayscale functions and images. It has fundamental operators including erosion,
+        dilation, opening, and closing.</p></br>
+
+    <h4>2.1.2 PROPOSED METHODOLOGY:</h4>
+    <h4>1: HAAR CASCADE ALGORITHM:</h4>
+    <p>The Haar Cascade algorithm is a popular method for object detection in images,
+        including the detection of license plates in images.
+        The Haar Cascade algorithm is a kind of machine learning algorithm that trains a
+        classifier using a set of positive and negative samples.
+        Image which contain the required objects(license plate)are the positive samples,
+        the image which doesn't contain the required object is the negative sample.</p>
+    <p>
+        The algorithm uses the Haar wavelet approach to extract features from the positive
+        and negative data during training.
+        Haar wavelets are mathematical functions that is capable of spotting changes in
+        contrast in an image.
+        The system can find features that are likely to be present on licence plates,
+        including the edges and corners of characters, by examining the variations in
+        contrast at various points in a picture.
+        Once trained,it can detect the number plate in new images.</p>
+    <p>The algorithm performs several scale and position scans of the image, computing a
+        score at each point based on the existence of the features that were discovered
+        during training.
+        The algorithm assumes the area has a licence plate if the score is higher than a
+        predetermined threshold.
+        Overall, the Haar Cascade algorithm is a reliable and effective approach for
+        detecting licence plates, and it has been applied to a variety of systems, including
+        security systems and traffic monitoring.</p></br>
+    
+
+    <h4>STEPS INVOLVED TO DETECT LICENCE PLATE:</h4>
+    <p>· Data Collection</p>
+    <p>· Data Preparation</p>
+    <p>· Feature Extraction</p>
+    <p>· Training</p>
+    <p>· Testing</p>
+    <p>· Plate Detection</p></br>
+
+    <h4>2.2 CHARACTER RECOGNITION:</h4>
+    <h4>2.2.1 EXISTING METHODOLOGY:</h4>
+    <h4>1. Artificial Neural Network(ANN):</h4>
+    <p>Artificial Neural Network (ANN), also referred to as neural network, is a
+        mathematical concept that refers to a system of artificial neurons that are
+        connected to one another. Character classification is done using an ANN model. It
+        has three layers: an input layer for decision-making, a hidden layer to calculate
+        more complex associations, and an output layer for the choice that is decided. An
+        ANN was trained using the feed-forward back-propagation (BP) algorithm. The
+        authors assert that their recognition rate is greater than 99%.</p>
+    <h4>2. Template Matching:</h4>
+    <p>Recognising fixed-sized characters is made possible through template matching. It
+        can also be utilised for object detection, generally face detection and medical
+        image processing. It is further divided into two sections: template-based matching
+        and feature-based matching. The feature-based technique is effective when the
+        template image includes prominent elements; otherwise, the template-based
+        approach can be helpful.</p></br>
+
+    <h4>2.2.2 PROPOSED METHODOLOGY:</h4>
+    <h4>1. OPTICAL CHARACTER RECOGNITION:</h4>
+    <p>Optical Character Recognition (OCR) is a method used to identify characters or
+        text in an image ( characters in license plate).
+        To extract and recognise characters from images, OCR systems often combine
+        image processing methods with machine learning algorithms.</p>
+
+    <h4>· Character Recognition:</h4>
+    <p>Apply the trained OCR algorithm to identify the characters from the new number
+        plate image.
+        The preprocessing of the image, character segmentation, feature extraction, and
+        application of the OCR system to the extracted features are used to accomplish
+        this.
+        The character with the highest probability of being recognised is picked from a
+        probability distribution over all potential characters that the OCR system outputs.</p>
+
+    <h4>· Post-processing:</h4>
+    <p>Refine the recognised characters using post-processing techniques, and get rid of
+        any erroneous detections. Techniques like thresholding, morphological procedures,
+        or language modelling can be used for this.</p>
+    <p>Overall, OCR offers a strong and adaptable framework for licence plate character
+        identification. The OCR system's correctness is influenced by the calibre and
+        volume of the training data, the architecture used for the OCR system, and the
+        potency of the pre- and post-processing methods.</p></br>
+
+    <h3>MERITS :</h3>
+    <p>· Automation: OCR algorithms are capable of automating the reading of
+        license plate numbers, removing the need for manual data entry and
+        minimizing errors.</p>
+    <p>· Low computational demands: The Haar cascade approach is more suited for
+        low-power devices and embedded systems since it uses less computing
+        resources than other machine learning-based algorithms.</p>
+    <p>· Integration: These algorithms are perfect for usage in automated systems
+        because they are simple to integrate with other technologies like cameras,
+        sensors, and databases.</p></br>
+
+    <h3>DEMERITS:</h3>
+    <p>· Limitations on language and font: OCR algorithms may have trouble reading
+        characters from other languages or fonts, especially if those characters are
+        underrepresented in the training data.</p>
+    <p>· Limited adaptability: The Haar cascade method might not be able to
+        accommodate modifications in license plate designs or variations in various
+        regions or nations.</p></br>
+
+    <h3>CONCLUSION AND FUTURE PLAN :</h3>
+    <p>Thus, the number plate is recognized by using Image Processing. The
+        information is stored in the database. The number plate image is obtained from the
+        parking video footage of the digital cameras and then by using Haarcascade
+        Algorithm and OCR technique the characters in the number plate are detected. The
+        Entry time and Exit time of the vehicle is noted and then the fair is collected
+        according to it. Hence manual work can be reduced by using this ANPR technique.</p>
+    <p>In Future, this Automatic Number Plate Recognition can be developed by
+        detecting the number plate from live videos. And better algorithm like YOLOv3
+        shall be implemented for better accuracy.</p></br>
+    
+
+    <h3>REFERENCES :</h3>
+    <p><a href="https://www.tutorialspoint.com/how-to-detect-license-plates-using-
+    opencv-python">· https://www.tutorialspoint.com/how-to-detect-license-plates-using-
+    opencv-python</a></p>
+    <p><a href="https://stackoverflow.com/questions/75296177/printing-to-a-pos-
+    thermal-printer-using-python">· https://stackoverflow.com/questions/75296177/printing-to-a-pos-
+    thermal-printer-using-python</a></p>
+    <p><a href="https://stackoverflow.com/questions/33650974/opencv-python-read-
+    specific-frame-using-videocapture">· https://stackoverflow.com/questions/33650974/opencv-python-read-
+    specific-frame-using-videocapture</a></p>
+    <p><a href="https://www.geeksforgeeks.org/delete-a-csv-column-in-python/">· https://www.geeksforgeeks.org/delete-a-csv-column-in-python/</a></p>
+    </br>
+</body>
